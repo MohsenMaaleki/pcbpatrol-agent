@@ -4,7 +4,7 @@
     "entryPoints": [
         {
             "filePath": "main",
-            "uniqueId": "98966f3c-1e04-4ffd-9e55-d0de21fae3f0",
+            "uniqueId": "7d2b4847-29f1-4879-b7b4-27b644886e44",
             "type": "function",
             "input": {
                 "type": "object",
@@ -14,11 +14,12 @@
                     },
                     "image_base64": {
                         "type": "string"
+                    },
+                    "image_url": {
+                        "type": "string"
                     }
                 },
-                "required": [
-                    "image_path"
-                ]
+                "required": []
             },
             "output": {
                 "type": "object",
@@ -74,7 +75,7 @@
             "graph": {
                 "nodes": [
                     {
-                        "id": "main.py:48",
+                        "id": "main.py:55",
                         "name": "main",
                         "type": "function",
                         "metadata": {

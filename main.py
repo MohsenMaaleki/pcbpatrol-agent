@@ -12,8 +12,9 @@ SERVICE_URL = os.environ.get(
 
 @dataclass
 class InspectIn:
-    image_path: str
+    image_path: str = ""
     image_base64: str = ""
+    image_url: str = ""
 
 
 @dataclass
@@ -34,9 +35,15 @@ class InspectOut:
 def main(input: InspectIn) -> InspectOut:
     if input.image_base64:
         b64 = input.image_base64
-    else:
+    elif input.image_url:
+        img = requests.get(input.image_url, timeout=30)
+        img.raise_for_status()
+        b64 = base64.b64encode(img.content).decode()
+    elif input.image_path:
         with open(input.image_path, "rb") as f:
             b64 = base64.b64encode(f.read()).decode()
+    else:
+        raise ValueError("Provide image_url, image_base64, or image_path")
 
     resp = requests.post(f"{SERVICE_URL}/inspect", json={"image": b64}, timeout=120)
     if resp.status_code != 200:

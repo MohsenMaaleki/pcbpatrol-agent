@@ -1,6 +1,6 @@
 [project]
 name = "pcbpatrol-agent"
-version = "0.0.1"
+version = "0.0.2"
 description = "pcbpatrol-agent"
 authors = [{ name = "Mohsen Maaleki", email = "mohsen.maaleki@outlook.com" }]
 dependencies = [
