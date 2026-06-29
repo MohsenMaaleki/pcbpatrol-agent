@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+# UiPath SDK-generated docs/skills (not source)
+AGENTS.md
+.agent/
+.claude/
+CLAUDE.md
+# local studio metadata
+.uipath/

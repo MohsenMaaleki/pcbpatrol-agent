@@ -1,0 +1,89 @@
+{
+    "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+    "$id": "entry-points.json",
+    "entryPoints": [
+        {
+            "filePath": "main",
+            "uniqueId": "98966f3c-1e04-4ffd-9e55-d0de21fae3f0",
+            "type": "function",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "image_path": {
+                        "type": "string"
+                    },
+                    "image_base64": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "image_path"
+                ]
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "is_anomaly": {
+                        "type": "boolean"
+                    },
+                    "anomaly_score": {
+                        "type": "number"
+                    },
+                    "num_detections": {
+                        "type": "integer"
+                    },
+                    "detections": {
+                        "type": "array"
+                    },
+                    "severity": {
+                        "type": "integer"
+                    },
+                    "recommended_disposition": {
+                        "type": "string"
+                    },
+                    "disposition_confidence": {
+                        "type": "number"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "probable_cause": {
+                        "type": "string"
+                    },
+                    "corrective_measure": {
+                        "type": "string"
+                    },
+                    "heatmap_png": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "is_anomaly",
+                    "anomaly_score",
+                    "num_detections",
+                    "detections",
+                    "severity",
+                    "recommended_disposition",
+                    "disposition_confidence",
+                    "description",
+                    "probable_cause",
+                    "corrective_measure",
+                    "heatmap_png"
+                ]
+            },
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "main.py:48",
+                        "name": "main",
+                        "type": "function",
+                        "metadata": {
+                            "file": "main.py"
+                        }
+                    }
+                ],
+                "edges": []
+            }
+        }
+    ]
+}

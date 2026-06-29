@@ -1,0 +1,10 @@
+[project]
+name = "pcbpatrol-agent"
+version = "0.0.1"
+description = "pcbpatrol-agent"
+authors = [{ name = "Mohsen Maaleki", email = "mohsen.maaleki@outlook.com" }]
+dependencies = [
+    "uipath>=2.10.0, <2.11.0",
+    "requests"
+]
+requires-python = ">=3.11"
