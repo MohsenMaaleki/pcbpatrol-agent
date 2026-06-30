@@ -4,6 +4,8 @@ A **UiPath coded agent** (Python) that bridges UiPath Automation Cloud and the [
 
 The agent takes a PCB image, sends it to the vision service's `/inspect` endpoint — where three ML models (RF-DETR + PatchCore + Qwen3-VL) analyze it — and maps the structured findings back into the Orchestrator job: detected defects, anomaly score, severity, recommended disposition, and reasoning. It runs **serverless on UiPath Automation Cloud**.
 
+**Agent type: Coded Agent** (Python, UiPath Python SDK), not low-code. Deployed to UiPath Automation Cloud and run serverless.
+
 ## How it fits
 
 ```
